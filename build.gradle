@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-//		springBootVersion = '1.5.2.RELEASE'
+//	springBootVersion = '1.5.2.RELEASE'
 //		springCloudVersion = '1.2.3.RELEASE'
 	}
 	repositories {
@@ -25,15 +25,23 @@ repositories {
 }
 
 dependencies {
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.4.1', ext: 'pom'
 	// Spring boot jar
+	//compile('org.springframework.cloud:spring-cloud-dependencies')
+	compile('org.springframework.boot:spring-boot-starter-web-services')
 	compile('org.springframework.boot:spring-boot-starter')
 	compile "org.springframework.boot:spring-boot-starter-web"
 	//compile "org.springframework.boot:spring-boot-starter-aop"
 	//compile "org.springframework.boot:spring-boot-starter-actuator"
 
 	// Feign jar
-	compile 'org.springframework.cloud:spring-cloud-starter-feign:1.2.6.RELEASE'
-	compile "com.netflix.hystrix:hystrix-javanica:1.5.10"
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '3.0.0'
+
+//	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.7.RELEASE'
+//	compile "com.netflix.hystrix:hystrix-javanica:1.5.10"
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
