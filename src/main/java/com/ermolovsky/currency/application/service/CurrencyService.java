@@ -1,7 +1,7 @@
 package com.ermolovsky.currency.application.service;
 
-import com.ermolovsky.currency.curclient.CurrencyModel;
-import com.ermolovsky.currency.curclient.CurrencyClient;
+import com.ermolovsky.currency.clients.models.CurrencyModel;
+import com.ermolovsky.currency.clients.CurrencyClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 

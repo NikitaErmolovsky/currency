@@ -1,7 +1,6 @@
-package com.ermolovsky.currency.curclient;
+package com.ermolovsky.currency.clients.models;
 
 import java.sql.Timestamp;
-import java.util.Map;
 import java.util.TreeMap;
 
 public class CurrencyModel {

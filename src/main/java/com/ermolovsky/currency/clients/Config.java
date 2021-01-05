@@ -1,4 +1,4 @@
-package com.ermolovsky.currency.curclient;
+package com.ermolovsky.currency.clients;
 
 
 import org.springframework.cloud.openfeign.EnableFeignClients;
