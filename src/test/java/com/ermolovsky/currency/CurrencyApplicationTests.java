@@ -8,6 +8,7 @@ class CurrencyApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

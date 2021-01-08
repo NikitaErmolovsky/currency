@@ -5,7 +5,6 @@ import java.util.TreeMap;
 
 public class GifModel {
     private ArrayList<NodeGifModel> data;
-    private TreeMap<String,String> meta;
 
     public ArrayList<NodeGifModel> getData() {
         return data;
@@ -15,11 +14,5 @@ public class GifModel {
         this.data = data;
     }
 
-    public TreeMap<String, String> getMeta() {
-        return meta;
-    }
 
-    public void setMeta(TreeMap<String, String> meta) {
-        this.meta = meta;
-    }
 }

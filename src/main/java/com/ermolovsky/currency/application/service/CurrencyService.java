@@ -23,13 +23,13 @@ public class CurrencyService {
     }
 
     public boolean showDif(){
-        Date date = new Date();
+        Date today = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        todayModel = currencyClient.getCurrency(simpleDateFormat.format(date),appId,"RUB");
-        long tmp = date.getTime();
+        todayModel = currencyClient.getCurrency(simpleDateFormat.format(today),appId,currency);
+        long tmp = today.getTime();
         tmp = tmp - 86400000;
         Date yesterday = new Date(tmp);
-        yesterdayModel = currencyClient.getCurrency(simpleDateFormat.format(yesterday),appId,"RUB");
+        yesterdayModel = currencyClient.getCurrency(simpleDateFormat.format(yesterday),appId,currency);
         return todayModel.getRates().get(currency) - yesterdayModel.getRates().get(currency) > 0;
     }
 }
