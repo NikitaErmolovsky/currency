@@ -2,7 +2,9 @@
 plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'com.bmuschko.docker-spring-boot-application' version '6.6.1'
 	id 'java'
+
 }
 
 group = 'currency'
@@ -23,6 +25,14 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation(platform('org.junit:junit-bom:5.7.0'))
 	testImplementation('org.junit.jupiter:junit-jupiter')
+}
+docker {
+	springBootApplication {
+		baseImage = 'openjdk:11-jre-slim'
+		ports = [8080]
+		images = ['currency-spring-boot:latest']
+		maintainer = 'NikitaErmolovsky'
+	}
 }
 
 test {
