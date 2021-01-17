@@ -14,7 +14,7 @@ ___
 ___
 # Настройки 
 -  параметры вынесены в файл application.properties
--  **указать значения myAppId (для api курса валют) и myGifId (для api гифок)**
+-  **указать значения application.properties.myAppId (для api курса валют) и application.properties.myGifId (для api гифок)**
 - для изменения валюты, по отношению к которой смотрится курс доллара, нужно изменить значение перемнной currency
 
 
