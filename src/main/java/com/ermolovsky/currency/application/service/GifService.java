@@ -16,7 +16,7 @@ public class GifService {
     private CurrencyService currencyService;
     private GifModel gifModel;
     private NodeGifModel nodeGifModel;
-    @Value("${myGifId}")
+    @Value("${application.properties.myGifId}")
     private String myGifId;
     private String query;
 

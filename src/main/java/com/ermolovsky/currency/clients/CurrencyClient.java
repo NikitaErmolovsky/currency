@@ -2,12 +2,14 @@ package com.ermolovsky.currency.clients;
 
 
 import com.ermolovsky.currency.clients.models.CurrencyModel;
+import lombok.Value;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name="CurrencyClient", url="https://openexchangerates.org/api/")
+
+@FeignClient(name="CurrencyClient", url="${curUrl}")
 public interface CurrencyClient {
     @RequestMapping(method=RequestMethod.POST,value="/historical/{date}.json")
 

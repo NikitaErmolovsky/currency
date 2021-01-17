@@ -1,15 +1,10 @@
 package com.ermolovsky.currency.clients.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.TreeMap;
 
 public class NodeGifModel {
-    private ImageModel images;
-
-    public ImageModel getImages() {
-        return images;
-    }
-
-    public void setImages(ImageModel images) {
-        this.images = images;
-    }
+    @Getter @Setter private ImageModel images;
 }

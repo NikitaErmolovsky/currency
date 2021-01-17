@@ -2,7 +2,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
-	id 'com.bmuschko.docker-spring-boot-application' version '6.6.1'
+	id "io.freefair.lombok" version "5.3.0"
 	id 'java'
 
 }
@@ -16,6 +16,8 @@ repositories {
 }
 
 dependencies {
+	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.4.1'
 	compile group: 'commons-validator', name: 'commons-validator', version: '1.7'
 	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -26,18 +28,10 @@ dependencies {
 	testImplementation(platform('org.junit:junit-bom:5.7.0'))
 	testImplementation('org.junit.jupiter:junit-jupiter')
 }
-docker {
-	springBootApplication {
-		baseImage = 'openjdk:11-jre-slim'
-		ports = [8080]
-		images = ['currency-spring-boot:latest']
-		maintainer = 'NikitaErmolovsky'
-	}
-}
 
-test {
-	useJUnitPlatform()
-	testLogging {
-		events "passed", "skipped", "failed"
-	}
-}
+//test {
+//	useJUnitPlatform()
+//	testLogging {
+//		events "passed", "skipped", "failed"
+//	}
+//}

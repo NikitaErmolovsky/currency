@@ -13,9 +13,9 @@ public class CurrencyService {
     private CurrencyClient currencyClient;
     private CurrencyModel todayModel;
     private CurrencyModel yesterdayModel;
-    @Value("${myAppId}")
+    @Value("${application.properties.myAppId}")
     private String appId;
-    @Value("${currency}")
+    @Value("${application.properties.currency}")
     private String currency;
 
     public CurrencyService(CurrencyClient currencyClient) {
