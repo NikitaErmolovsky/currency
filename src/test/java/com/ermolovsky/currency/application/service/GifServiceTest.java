@@ -24,7 +24,7 @@ import static org.mockito.ArgumentMatchers.*;
 
 @SpringBootTest
 class GifServiceTest {
-    @Value("${myGifId}")
+    @Value("${application.properties.myGifId}")
     private String myGifId;
     @MockBean
     CurrencyService currencyService;
